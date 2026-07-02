@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require('path')
 
+const PORT = process.env.PORT || 8000
 const app = express();
 
 app.get('/', (req, res) => {
@@ -13,6 +14,6 @@ app.get('/baba', (req,res) => {
 
 
 
-const server = app.listen(8000, () => 
-	console.log(`Server is running on port 8000`))
+const server = app.listen(PORT, () => 
+	console.log(`Server is running on port ${PORT}`))
 
